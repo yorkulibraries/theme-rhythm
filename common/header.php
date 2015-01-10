@@ -18,6 +18,9 @@
     <?php
     queue_css_file(array('iconfonts', 'normalize', 'style'));
     queue_css_url('//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic|PT+Serif:700');
+    if (get_current_record('exhibit')) {
+        queue_css_file(get_current_record('exhibit')->slug);
+    }
     echo head_css();
     ?>
 
@@ -28,7 +31,7 @@
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <?php fire_plugin_hook('public_body', array('view' => $this)); ?>
 
-<div id="wrap">
+<div id="wrap" class="<?php echo 'exhibit-' . get_current_record('exhibit')->slug; ?>">
     <header>
 	    <?php fire_plugin_hook('public_header', array('view' => $this)); ?>
 	    <?php echo theme_header_image(); ?>

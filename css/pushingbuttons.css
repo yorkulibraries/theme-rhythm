@@ -1,0 +1,10 @@
+.exhibit-pushingbuttons .layout-gallery .gallery.with-showcase .exhibit-item {
+  width: auto;
+}
+.exhibit-pushingbuttons div.video-js[style] {
+  width: 600px !important;
+}
+.exhibit-pushingbuttons .item .item-meta img.fedora-renderer {
+  height: auto;
+  width: 100%;
+}
