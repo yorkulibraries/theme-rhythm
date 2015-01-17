@@ -8,3 +8,6 @@
   height: auto;
   width: 100%;
 }
+.exhibit-pushingbuttons .exhibit-block.layout-file-text .exhibit-items.left.fullsize {
+  max-width: 100%;
+}
