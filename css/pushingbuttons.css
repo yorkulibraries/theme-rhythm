@@ -11,3 +11,5 @@
 .exhibit-pushingbuttons .exhibit-block.layout-file-text .exhibit-items.left.fullsize {
   max-width: 100%;
 }
+
+nav#primary-nav { display: none; }
