@@ -38,7 +38,7 @@
         <div id="title-tagline">
             <div id="site-title">
               <?php if($exhibit = get_view()->exhibit): ?>
-                <p><?php echo link_to($exhibit, 'show', metadata($exhibit, 'title')); ?></p>
+                <p><?php echo link_to($exhibit, 'show', theme_logo()); ?></p>
               <?php else: ?>
                 <?php echo link_to_home_page(theme_logo()); ?>
               <?php endif; ?>
