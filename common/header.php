@@ -36,7 +36,13 @@
 	    <?php fire_plugin_hook('public_header', array('view' => $this)); ?>
 	    <?php echo theme_header_image(); ?>
         <div id="title-tagline">
-            <div id="site-title"><?php echo link_to_home_page(theme_logo()); ?></div>
+            <div id="site-title">
+              <?php if($exhibit = get_view()->exhibit): ?>
+                <p><?php echo link_to($exhibit, 'show', metadata($exhibit, 'title')); ?></p>
+              <?php else: ?>
+                <?php echo link_to_home_page(theme_logo()); ?>
+              <?php endif; ?>
+            </div>
             <?php echo rhythm_display_tagline(); ?>
         </div> <!-- end #site-title -->
 
